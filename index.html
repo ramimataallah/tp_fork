@@ -42,6 +42,11 @@
             width: 250px;
             box-shadow: 0 0 10px #ddd;
             text-align: center;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
         }
 
         .card img {
@@ -54,6 +59,21 @@
         .price {
             font-weight: bold;
             color: #2c3e50;
+        }
+
+        .order-btn {
+            background-color: #c0392b;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 10px 15px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .order-btn:hover {
+            background-color: #a93226;
         }
 
         footer {
@@ -83,6 +103,7 @@
             <h3>Pâtes Carbonara</h3>
             <p>Sauce crémeuse & fromage</p>
             <p class="price">18 DT</p>
+            <button class="order-btn" onclick="commander('Pâtes Carbonara')">Commander</button>
         </div>
 
         <div class="card">
@@ -90,6 +111,7 @@
             <h3>Pizza Margherita</h3>
             <p>Tomates fraîches, basilic, mozzarella</p>
             <p class="price">20 DT</p>
+            <button class="order-btn" onclick="commander('Pizza Margherita')">Commander</button>
         </div>
 
         <div class="card">
@@ -97,6 +119,7 @@
             <h3>Tacos</h3>
             <p>Viande ou poulet + sauce maison</p>
             <p class="price">14 DT</p>
+            <button class="order-btn" onclick="commander('Tacos')">Commander</button>
         </div>
 
         <div class="card">
@@ -104,6 +127,7 @@
             <h3>Salade César</h3>
             <p>Poulet grillé, parmesan, croutons</p>
             <p class="price">15 DT</p>
+            <button class="order-btn" onclick="commander('Salade César')">Commander</button>
         </div>
 
     </section>
@@ -115,6 +139,12 @@
         <p>📞 Téléphone : 22 333 444</p>
         <p>✉ Email : ledelice@food.tn</p>
     </footer>
+
+    <script>
+        function commander(plat) {
+            alert("Vous avez choisi de commander : " + plat + " 🍽️");
+        }
+    </script>
 
 </body>
 </html>
